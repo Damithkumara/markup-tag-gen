@@ -1,11 +1,11 @@
-# Tag-Gen
+# markup-tag-gen
 
 Generate Markup Tags with ease
 
 ## Installation
 
 ```
-npm i tag-gen
+npm i markup-tag-gen
 ```
 
 ## Usage
@@ -15,8 +15,8 @@ Use the exported `tag` function to generate markup. You can nest them too.
 ### Examples:
 
 ```TS
-import { tag } from 'tag-gen'
-// const { tag } = require('tag-gen')
+import { tag } from 'markup-tag-gen'
+// const { tag } = require('markup-tag-gen')
 
 tag('div') // '<div></div>'
 
