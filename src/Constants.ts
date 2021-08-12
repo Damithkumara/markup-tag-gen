@@ -1,3 +1,4 @@
+/** Void Tags */
 export const voidTags = [
     'area',
     'base',

@@ -1,5 +1,19 @@
 import { hasWhitespace, isVoidTag } from './utils'
 
+/**
+ * Function to generate tags
+ * @param {string}name - the name of the root tag
+ * @param attribs - attribs of the root tag or first child
+ * @param {Array<string>}children - child tags
+ * @returns {string} - the html string
+ *
+ * Example:
+ * ```ts
+ * import { tag } from 'markup-tag-gen'
+ *
+ * tag('div', {class: 'test'}, 'Hello World')
+ * ```
+ */
 export const tag = (
     name: string,
     attribs?: Record<string, string | number> | string,
