@@ -9,7 +9,7 @@
     "lint": "eslint \"src/**/*.ts\"",
     "prepare": "npm run build",
     "prettier-format": "prettier --config .prettierrc \"src/**/*.ts\" --write",
-    "test": "node --trace-warnings ./test"
+    "test": "mocha -r ts-node/register src/Tests/tag.test.ts"
   },
   "repository": {
     "type": "git",
@@ -26,12 +26,14 @@
   },
   "homepage": "https://github.com/alensaito1/tag-gen#readme",
   "devDependencies": {
+    "@types/mocha": "^9.0.0",
     "@types/node": "^16.6.0",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "@typescript-eslint/parser": "^4.29.1",
     "eslint": "^7.32.0",
     "mocha": "^9.0.3",
     "prettier": "^2.3.2",
+    "ts-node": "^10.2.0",
     "typescript": "^4.3.5"
   }
 }
