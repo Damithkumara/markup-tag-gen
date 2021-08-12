@@ -1,0 +1,171 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>markup-tag-gen - v0.0.1</title>
+	<meta name="description" content="Documentation for markup-tag-gen - v0.0.1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">markup-tag-gen - v0.0.1</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>markup-tag-gen - v0.0.1</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#markup-tag-gen" id="markup-tag-gen" style="color: inherit; text-decoration: none;">
+					<h1>markup-tag-gen</h1>
+				</a>
+				<p>Generate Markup Tags with ease</p>
+				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+					<h2>Installation</h2>
+				</a>
+				<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">i</span><span style="color: #000000"> </span><span style="color: #001080">markup</span><span style="color: #000000">-</span><span style="color: #001080">tag</span><span style="color: #000000">-</span><span style="color: #001080">gen</span>
+</code></pre>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h2>Usage</h2>
+				</a>
+				<p>Use the exported <code>tag</code> function to generate markup. You can nest them too.</p>
+				<a href="#examples" id="examples" style="color: inherit; text-decoration: none;">
+					<h3>Examples:</h3>
+				</a>
+				<pre><code class="language-TS"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">tag</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;markup-tag-gen&#039;</span>
+<span style="color: #008000">// const { tag } = require(&#039;markup-tag-gen&#039;)</span>
+
+<span style="color: #795E26">tag</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;div&#039;</span><span style="color: #000000">) </span><span style="color: #008000">// &#039;&lt;div&gt;&lt;/div&gt;&#039;</span>
+
+<span style="color: #795E26">tag</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;div&#039;</span><span style="color: #000000">, { </span><span style="color: #001080">class:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;foo&#039;</span><span style="color: #000000"> }) </span><span style="color: #008000">// &lt;div class=&quot;foo&quot;&gt;&lt;/div&gt;</span>
+
+<span style="color: #795E26">tag</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;div&#039;</span><span style="color: #000000">, { </span><span style="color: #001080">class:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;foo bar baz&#039;</span><span style="color: #000000">, </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;bar&#039;</span><span style="color: #000000">, </span><span style="color: #001080">style:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;color: red;&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;data-foo&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;bar&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;data-bar&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;foo&#039;</span><span style="color: #000000"> },  </span><span style="color: #A31515">&#039;Well in that case...&#039;</span><span style="color: #000000">) </span><span style="color: #008000">// &#039;&lt;div class=&quot;foo bar baz&quot; id=&quot;bar&quot; style=&quot;color: red;&quot; data-foo=&quot;bar&quot; data-bar=&quot;foo&quot;&gt;Well in that case...&lt;/div&gt;&#039;</span>
+</code></pre>
+				<a href="#preview-1" id="preview-1" style="color: inherit; text-decoration: none;">
+					<h3>Preview 1</h3>
+				</a>
+				<pre><code class="language-ts"><span style="color: #795E26">tag</span><span style="color: #000000">(</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&#039;div&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    { </span><span style="color: #001080">class:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;foo bar baz&#039;</span><span style="color: #000000">, </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;bar&#039;</span><span style="color: #000000">, </span><span style="color: #001080">style:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;color: red;&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;data-foo&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;bar&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;data-bar&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;foo&#039;</span><span style="color: #000000"> },</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&#039;Well in that case...&#039;</span>
+<span style="color: #000000">)</span>
+</code></pre>
+				<p>The above statement will return markup for the following:</p>
+				<p><a href="https://imgbb.com/"><img src="https://i.ibb.co/1TTrjJ7/Screenshot-2021-08-12-HTML-Code-Editor.png" alt="Screenshot-2021-08-12-HTML-Code-Editor" border="0"></a></p>
+				<a href="#preview-2" id="preview-2" style="color: inherit; text-decoration: none;">
+					<h3>Preview 2</h3>
+				</a>
+				<blockquote>
+					<p>Nested tags</p>
+				</blockquote>
+				<pre><code class="language-TS"><span style="color: #795E26">tag</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;div&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    {</span>
+<span style="color: #000000">        </span><span style="color: #001080">align:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;center&#039;</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">    </span><span style="color: #795E26">tag</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;img&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        {</span>
+<span style="color: #000000">            </span><span style="color: #001080">src:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;https://placekitten.com/200/300&#039;</span>
+<span style="color: #000000">        }</span>
+<span style="color: #000000">    )</span>
+<span style="color: #000000">)</span>
+</code></pre>
+				<p>The above statement will return markup for the following:</p>
+				<p><a href="https://imgbb.com/"><img src="https://i.ibb.co/pfTvtwz/Screenshot-2021-08-12-HTML-Code-Editor-2.png" alt="Screenshot-2021-08-12-HTML-Code-Editor-2" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'></a><br /></p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#AMP" class="tsd-kind-icon">AMP</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#GT" class="tsd-kind-icon">GT</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#LT" class="tsd-kind-icon">LT</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#NBSP" class="tsd-kind-icon">NBSP</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#QUOT" class="tsd-kind-icon">QUOT</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#voidTags" class="tsd-kind-icon">void<wbr>Tags</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#hasWhitespace" class="tsd-kind-icon">has<wbr>Whitespace</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#isVoidTag" class="tsd-kind-icon">is<wbr>Void<wbr>Tag</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#tag" class="tsd-kind-icon">tag</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
