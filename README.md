@@ -35,9 +35,9 @@ tag(
 )
 ```
 
-The above statement will return markup for the following
+The above statement will return markup for the following:
 
-## <div class="foo bar baz" id="bar"  style="color: red;" data-foo="bar" data-bar="foo">Well in that case...</div>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/1TTrjJ7/Screenshot-2021-08-12-HTML-Code-Editor.png" alt="Screenshot-2021-08-12-HTML-Code-Editor" border="0"></a>
 
 ### Preview 2
 
@@ -56,4 +56,6 @@ tag('div',
 )
 ```
 
-<div align=center><img src="https://placekitten.com/200/300">=</div>
+The above statement will return markup for the following:
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/pfTvtwz/Screenshot-2021-08-12-HTML-Code-Editor-2.png" alt="Screenshot-2021-08-12-HTML-Code-Editor-2" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'></a><br />
