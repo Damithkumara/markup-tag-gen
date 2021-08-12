@@ -11,5 +11,5 @@ export const tag = (
     if (typeof attribs === 'string') children.unshift(attribs)
     else if (attribs) Object.entries(attribs).forEach(([key, value]) => attributes.push(`${key}="${value}"`))
 
-    return `<${name} ${attributes.join(' ')}>${isVoidTag(name) ? '' : `${children.join('')}</${name}>`}`
+    return `<${name} ${attributes.join('')}>${isVoidTag(name) ? '' : `${children.join('')}</${name}>`}`
 }
